@@ -2,7 +2,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 from __future__ import annotations
-from typing import Any, TypeAlias, TYPE_CHECKING
+
+from typing import TYPE_CHECKING, Any, TypeAlias
 
 import coremltools as ct
 import numpy as np
