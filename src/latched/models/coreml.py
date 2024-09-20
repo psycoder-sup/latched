@@ -77,3 +77,19 @@ def generate(
         extended_tokens.append(token)
 
     return tokenizer.decode(prompt_tokens[0].tolist() + extended_tokens)
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model_path", type=str, required=True)
+    parser.add_argument("--tokenizer_path", type=str, required=True)
+    parser.add_argument("--prompt", type=str, required=True)
+    parser.add_argument("--max_new_tokens", type=int, default=100)
+    args = parser.parse_args()
+
+    model, tokenizer = load(args.model_path, args.tokenizer_path)
+
+    generated_text: str = generate(model, args.prompt, tokenizer, args.max_new_tokens)
+    print(generated_text)
