@@ -9,14 +9,13 @@ authors = ["psycoder <psycoder@latched.ai>", "sungman <sungman@latched.ai>"]
 python = "3.11.9"
 coremltools = "8.0b2"
 transformers = "<4.44"
-torch = ">=2.4"
+torch = "2.3.0"
 numpy = "<2"
 optimum = "^1.21.4"
-torchvision = "^0.19.1"
-optimum-quanto = "^0.2.4"
 onnxruntime = "^1.19.2"
 onnx = "^1.16.2"
 optimum-intel = "^1.19.0"
+torchvision = "<0.19"
 
 
 [tool.poetry.group.dev.dependencies]
